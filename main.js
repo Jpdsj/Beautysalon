@@ -58,6 +58,17 @@ scrollReveal.reveal(
    #testimonials .testimonials,
    #contact .text,
    #contact .links
+   footer .brand, footer .social
   `,
   { interval: 100 }
 )
+
+/* Botão voltar para o topo */
+const backToTopButton = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= 700) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+})
